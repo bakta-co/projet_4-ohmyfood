@@ -1,0 +1,33 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Shrikhand', sans-serif;
+}
+$lightgrey: #F6F6F6;
+
+
+header {
+    height: 63px;
+    }
+
+
+.img {
+    height: 275px;
+    width: 100%;
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+    z-index: 0;
+}
+
+.menu {
+    background-color: $lightgrey;
+    border-radius: 50px 50px 0 0;
+    position: relative; top: -100px;
+    z-index: 1;
+    .nom-restaurant {
+        padding-top: 32px;
+        text-decoration: underline;
+        text-align : center;
+    }
+}

@@ -1,0 +1,27 @@
+.hero-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+  height: 287px;
+  padding-top: 0;
+  margin-top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.hero-header .hero-header__title {
+  width: 73%;
+  margin-bottom: 0;
+}
+.hero-header .hero-header__txt {
+  margin: 0;
+  padding-bottom: 27px;
+  font-family: Roboto;
+  font-size: 1.125rem;
+  font-weight: 100;
+  width: 84%;
+}
+
+/*# sourceMappingURL=hero-header.css.map */

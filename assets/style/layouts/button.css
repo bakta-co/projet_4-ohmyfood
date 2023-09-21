@@ -1,0 +1,23 @@
+.hero-header__btn {
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+.hero-header__btn button {
+  border-radius: 1.5625rem;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  width: 218px;
+  height: 50px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+.hero-header__btn :hover {
+  opacity: 0.8;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+/*# sourceMappingURL=button.css.map */

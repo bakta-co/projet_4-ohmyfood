@@ -1,0 +1,78 @@
+footer {
+    padding: 22px 25px 22px 25px;
+    background-color: #353535;
+    width: auto;
+    h3, p {
+        color: white;
+    }
+
+    h3 {
+        font-family: Shrikhand;
+        font-weight: 400;
+        font-size: 1.125rem;
+        margin-bottom: 16px;
+        padding-right: 0;
+    }
+    .fa-utensils {
+        padding-right: 11px;
+        width: 11px;
+        height: 13px;
+    }
+    .fa-handshake-angle {
+        padding-right: 8px;
+        height: 13px;
+    }
+    
+    p {
+        font-family: Roboto;
+        font-size: 1rem;
+        font-weight: 300;
+        padding-left: 0;
+    }
+    .bolder {
+        font-weight: 500;
+    }
+}
+
+/* tablette */
+
+@media screen and (min-width: 500px)  {
+
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+    }
+
+    footer h3 {
+        width: 13%;
+        padding-right: 0;
+    }
+
+    .footer-txt {
+        display: flex;
+        width: 75%;
+        gap: 5px;
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+
+    .bolder {
+        display: flex;
+        gap: 8px;
+    }
+
+    .smaller {
+        display: flex;
+        gap: 5px;
+    }
+
+
+}
+
+@media screen and (min-width: 1025px) {
+
+    .footer-txt {
+        width: 50%;
+    }
+}
