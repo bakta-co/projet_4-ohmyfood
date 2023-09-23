@@ -7,7 +7,64 @@
 
 $lightgrey: #F6F6F6;
 $black: #101010;
+$linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
 
+
+.preloader {
+    position: fixed;
+    top:0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $lightgrey;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+   
+}
+.dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $linearGradient;
+    margin: 0 15px;
+    opacity: 1;
+    animation: loader infinite 0.3s alternate;
+}
+.dot2 {
+    animation-delay: 0.05s;
+}
+.dot3 {
+    animation-delay: 0.1s;
+}
+@keyframes loader {
+    0% {
+    
+    }
+    100% {
+        transform: translateY(-30px);
+        
+    }
+
+}
+
+@keyframes fin-loader {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .preloader {
+    opacity: 1; /* Définissez l'opacité initiale à 0 si vous le souhaitez */
+    animation-name: fin-loader;
+    animation-duration: 2s; /* Durée de l'animation */
+    animation-delay: 2s; /* Délai de 2 secondes avant le début de l'animation */
+    animation-fill-mode: forwards; /* Laissez l'élément à l'état final de l'animation */
+  }
 
 
 h2 {
