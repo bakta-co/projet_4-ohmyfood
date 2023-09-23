@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/button.css">   
-    <link rel="stylesheet" href="./assets/css/footer.css">
-    <link rel="stylesheet" href="./assets/css/page-menu.css">
+    <link rel="stylesheet" href="./assets/style/layouts/body.css">
+    <link rel="stylesheet" href="./assets/style/layouts/header.css">
+    <link rel="stylesheet" href="./assets/style/layouts/button.css">   
+    <link rel="stylesheet" href="./assets/style/layouts/footer.css">
+    <link rel="stylesheet" href="./assets/style/layouts/page-menu.css">
+    <link rel="stylesheet" href=".assets/style/layouts/button.css"
 </head>
 
 <body>
@@ -29,92 +30,41 @@
     <img src="./assets/Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un repas chez La Palette du goût">
     </div>
     <div class="menu">
-        <h2>La palette du goût</h2>
+        <h2 class="nom-restaurant">La palette du goût <span><i class="fa-regular fa-heart coeur-vide"></i><i class="fa-solid fa-heart coeur-plein"></i></span></h2>
 
         <section class="entrées">
-        <h3>Entrées</h3>
+        <h3>ENTREES</h3>
         <div class="plats">
-            <div class="plat-card">
+            <button class="plat-card">
                 <h4>Fricassée d'escargots</h4>
                 <div class="plat-card-txt">
                 <p class="description">Au piment d'Espelette</p>
-                <button class="prix">25€</button>
+                <p class="prix">25€</p>
                 </div>
-            </div>
-            <div class="plat-card">
+                <i class="fa-solid fa-circle-check"></i>
+            
+            </button>
+
+            <button class="plat-card">
                 <h4>Foie gras de canard mi-cuit</h4>
                 <div class="plat-card-txt">
                 <p class="description">Et ses copeaux de truffe noire</p>
-                <button class="prix">35€</button>
+                <p class="prix">35€</p>
                 </div>
-            </div>
-            <div class="plat-card">
+            </button>
+            <button class="plat-card">
                 <h4>oeufs au plat</h4>
                 <div class="plat-card-txt">
                 <p class="description">Assaisonné à la truffe sur lit de caviar</p>
-                <button class="prix">20€</button>
+                <p class="prix">20€</p>
                 </div>
-            </div>
+            </button>
         </div>
         </section>
 
-        <section class="entrées">
-            <h3>Entrées</h3>
-            <div class="plats">
-                <div class="plat-card">
-                    <h4>Fricassée d'escargots</h4>
-                    <div class="plat-card-txt">
-                    <p class="description">Au piment d'Espelette</p>
-                    <button class="prix">25€</button>
-                    </div>
-                </div>
-                <div class="plat-card">
-                    <h4>Foie gras de canard mi-cuit</h4>
-                    <div class="plat-card-txt">
-                    <p class="description">Et ses copeaux de truffe noire</p>
-                    <button class="prix">35€</button>
-                    </div>
-                </div>
-                <div class="plat-card">
-                    <h4>oeufs au plat</h4>
-                    <div class="plat-card-txt">
-                    <p class="description">Assaisonné à la truffe sur lit de caviar</p>
-                    <button class="prix">20€</button>
-                    </div>
-                </div>
-            </div>
-            </section>
-
-            <section class="entrées">
-                <h3>Entrées</h3>
-                <div class="plats">
-                    <div class="plat-card">
-                        <h4>Fricassée d'escargots</h4>
-                        <div class="plat-card-txt">
-                        <p class="description">Au piment d'Espelette</p>
-                        <button class="prix">25€</button>
-                        </div>
-                    </div>
-                    <div class="plat-card">
-                        <h4>Foie gras de canard mi-cuit</h4>
-                        <div class="plat-card-txt">
-                        <p class="description">Et ses copeaux de truffe noire</p>
-                        <button class="prix">35€</button>
-                        </div>
-                    </div>
-                    <div class="plat-card">
-                        <h4>oeufs au plat</h4>
-                        <div class="plat-card-txt">
-                        <p class="description">Assaisonné à la truffe sur lit de caviar</p>
-                        <button class="prix">20€</button>
-                        </div>
-                    </div>
-                </div>
-                </section>
-    </div>
 
     <div> 
-        <button>Commander</button>
+        <button class="hero-header__btn">Commander</button>
     </div>
 
     </main>
