@@ -59,11 +59,11 @@ $linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   }
   
   .preloader {
-    opacity: 1; /* Définissez l'opacité initiale à 0 si vous le souhaitez */
+    opacity: 1; 
     animation-name: fin-loader;
-    animation-duration: 2s; /* Durée de l'animation */
-    animation-delay: 2s; /* Délai de 2 secondes avant le début de l'animation */
-    animation-fill-mode: forwards; /* Laissez l'élément à l'état final de l'animation */
+    animation-duration: 2s; 
+    animation-delay: 2s; 
+    animation-fill-mode: forwards; 
   }
 
 
