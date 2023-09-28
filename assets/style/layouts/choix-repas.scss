@@ -1,0 +1,69 @@
+.choix-repas {
+        width: 100%;
+        padding: 15px;
+        height: 69px;
+        margin-top: 12px;
+        border: none;
+        text-align: left;
+        border-radius: 15.043px;
+        display: inline-block;
+        background-color: #FFF;
+        cursor: pointer;
+        box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
+        position: relative;
+        font-family: 'Roboto';
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: all 0.2s linear 0s;
+
+    &:focus {
+        outline: none;
+        text-indent: 60px;
+    }
+
+    &::before {
+        content: "\f058";
+        font-family: FontAwesome;
+        color: white;
+        background-color:  #99E2D0;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: -60px;
+        width: 60px;
+        height: 100%;
+        transition: all 0.2s linear 0s;
+        text-align: end;
+    }
+
+    &:focus {
+        text-indent: 0px;
+        
+        &::before {
+            right:0;
+            text-indent: 0px;
+        }
+
+        .prix {
+            transform: translateX(-250%)
+        }
+        
+        .reduire-click {
+            width: 70%;
+        }
+}
+
+        .reduire-click {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            transition: width 0.2s ease;
+            
+        }
+    
+   
+    
+}

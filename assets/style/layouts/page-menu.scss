@@ -94,6 +94,10 @@ section {
     margin-bottom: 40px;
 }
 
+.epd {
+    padding-top: 40px;
+}
+
 section h3 {
     font-family: Roboto;
     font-weight: 300;
@@ -111,59 +115,59 @@ section h3 {
     }
 }
 
-.plat-card {
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    height: 69px;
-    padding: 15px;
-    margin-top: 12px;
-    border: none;
-    border-radius: 15.043px;
-    background-color: #FFF;
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
-    box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
-    transition: transform 400ms ease-in-out;
-    transform-origin: 0%;
-    &:hover {
-        transform: scaleX(0.8);
-    }
-    .plat-card::before{
-        content:"\f004";
-        position: absolute;
-        width: 0%;
-        height: 100%;
-        background-color: $lightblue;
-        top: 0;
-        right: 0;
-        z-index: -1;
-        transition: all 0.5s;
-    }
-    .plat-card:hover::before {
-        width: 15%;
-    }
     h4 {
         font-family: Roboto;
         font-size: 18px;
         font-weight: 500;
+        text-align: start;
+        margin-left: 20px;
     }
     .plat-card-txt {
+        width: 150px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        font-family: Roboto;
+        width: auto;
+        font-family: Roboto ;
         font-style: normal;
         font-size: 15px;
         font-weight: 100;
+        margin-left: 20px;
+        margin-right: 0;
+        height: 69px;
+       
+        
         }
+    
+    .description {
+        font-family: Roboto;
+        font-size: 15px;
+        text-align: start;
+        flex-wrap: nowrap;
+        margin-right: 0;
+    }
+    .prix {
+        font-family: Roboto;
+        position: absolute;
+        right: 10px;
+        text-align: end;
+        transition: transform 0.2s ease;
+        transform: translateX(0);
+        
+    }
+    
 
+
+@media screen and (min-width:500px) {
+    .menu-section {
+        width: 634px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
     
 }
-
-
 
 
 
