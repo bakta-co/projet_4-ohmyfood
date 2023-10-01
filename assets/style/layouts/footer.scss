@@ -12,6 +12,10 @@ footer {
         font-size: 1.125rem;
         margin-bottom: 16px;
         padding-right: 0;
+        width: 50%;
+    }
+    .footer-txt {
+        width: 100%;
     }
     .fa-utensils {
         padding-right: 11px;
@@ -28,51 +32,106 @@ footer {
         font-size: 1rem;
         font-weight: 300;
         padding-left: 0;
+        width: 100%;
     }
     .bolder {
         font-weight: 500;
+    }
+    .smaller {
+        a {
+        text-decoration: none;
+        color: white;
+        font-family: Roboto;
+        }
     }
 }
 
 /* tablette */
 
-@media screen and (min-width: 500px)  {
+@media screen and (min-width: 700px)  {
 
-    footer {
+   footer {
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-end;
-    }
+        gap:2%;
 
-    footer h3 {
-        width: 13%;
-        padding-right: 0;
+        h3 {
+            width: 13%;
+            margin-left: 5px;
+        }
+
+        .footer-txt {
+            display: flex;
+            justify-content: end;
+            text-wrap: nowrap;
+            text-align: end;
+            width: 80%;
+            padding: 0;
+            
+
+            gap: 10px;
+            .bolder {
+                display: flex;
+                gap:5px;
+            }
+            .smaller {
+                display: flex;
+                gap:10px;
+                /*width: 60%;*/
+            }
+        }
+    }
+}
+
+     /*
+
+    p {
+        width: 30%;
+        padding: 0;
     }
 
     .footer-txt {
         display: flex;
-        width: 75%;
-        gap: 5px;
+        width: 30%;
+        gap: 10px;
         justify-content: flex-end;
-        padding-right: 20px;
+        align-items: end;
+        /*padding-right: 20px;
+        width: auto;
     }
 
     .bolder {
         display: flex;
         gap: 8px;
+        width: 40%;
+        justify-content: flex-end;
+        padding: 0;
     }
 
     .smaller {
         display: flex;
+        width: 30%;
         gap: 5px;
-    }
+        padding: 0;
+        justify-content: flex-end;
+        p {
+            width: 40%;
+        text-wrap: nowrap;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            padding-top: 30px;
+        }
+    }*/
 
 
-}
 
-@media screen and (min-width: 1025px) {
+
+/*@media screen and (min-width: 1025px) {
 
     .footer-txt {
         width: 50%;
     }
-}
+}*/
