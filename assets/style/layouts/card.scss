@@ -13,6 +13,7 @@ $linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
 
     a {
         text-decoration: none;
+        color: black;
     }
     a:visited {
         text-decoration: none;
@@ -71,7 +72,7 @@ $linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
             width: 22px;
             height: 21px;
             position: relative;
-            left: -25px;
+            left: -8px;
             top: 15px;
         }
 
@@ -93,7 +94,7 @@ $linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
                     width: 22px;
                     height: 21px;
                     font-size: 22px;
-                    top: -1.2px;
+                    top: -1.4px;
                     left: -1px;
                     background: $linearGradient;
                     background-clip: border-box;

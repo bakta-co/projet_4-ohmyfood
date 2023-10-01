@@ -1,25 +1,30 @@
 footer {
+    display: flex;
+    flex-direction: column;
     padding: 22px 25px 22px 25px;
     background-color: #353535;
     width: auto;
-    h3, p {
-        color: white;
-    }
+    max-width: 1440px;
+    gap:20px;
 
-    h3 {
+
+    .titre-footer {
         font-family: Shrikhand;
         font-weight: 400;
+        color: white !important;
         font-size: 1.125rem;
-        margin-bottom: 16px;
         padding-right: 0;
-        width: 50%;
-    }
-    .footer-txt {
         width: 100%;
     }
+    .footer-txt {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
     .fa-utensils {
-        padding-right: 11px;
-        width: 11px;
+        padding-right: 10px;
         height: 13px;
     }
     .fa-handshake-angle {
@@ -27,7 +32,7 @@ footer {
         height: 13px;
     }
     
-    p {
+    & p {
         font-family: Roboto;
         font-size: 1rem;
         font-weight: 300;
@@ -35,13 +40,20 @@ footer {
         width: 100%;
     }
     .bolder {
+        display: flex;
+        flex-direction: column;
         font-weight: 500;
+        gap: 5px;
     }
     .smaller {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
         a {
         text-decoration: none;
         color: white;
         font-family: Roboto;
+        font-weight: 300;
         }
     }
 }
@@ -54,15 +66,26 @@ footer {
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-end;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100%;
         gap:2%;
 
-        h3 {
+        .titre-footer {
             width: 13%;
             margin-left: 5px;
+            margin-bottom: 11px;
+            color: white;
+        }
+
+        .margin-none {
+            margin-bottom: 0;
         }
 
         .footer-txt {
-            display: flex;
+            flex-direction: row;
             justify-content: end;
             text-wrap: nowrap;
             text-align: end;
@@ -72,11 +95,11 @@ footer {
 
             gap: 10px;
             .bolder {
-                display: flex;
+                flex-direction: row;
                 gap:5px;
             }
             .smaller {
-                display: flex;
+                flex-direction: row;
                 gap:10px;
                 /*width: 60%;*/
             }
