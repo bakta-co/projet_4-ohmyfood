@@ -1,6 +1,8 @@
 * {
   font-family: "Roboto", sans-serif;
   font-family: "Shrikhand", sans-serif;
+  /*box-shadow: 0 0 0 1px red
+  inset;*/
 }
 
 /* variables et mixin*/
@@ -47,7 +49,7 @@
   }
   100% {
     opacity: 0;
-    display: none;
+    z-index: -20;
   }
 }
 .preloader {
@@ -62,47 +64,57 @@ h2 {
   font-family: Roboto;
   font-size: 1.5rem;
   font-weight: 700;
-  padding-left: 50px;
   padding-right: 0;
   margin-right: 0;
+  width: 40%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
 /* tablette */
-@media screen and (max-width: 1024px) {
-  body {
-    max-width: 1024px;
-  }
-}
+/*@media screen and (max-width: 1024px) {
+
+    body {
+        max-width: 1024px;
+    }
+
+}*/
 @media screen and (min-width: 1025px) {
   body {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    margin: auto;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center !important;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
   }
   main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 1440px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
   }
   section {
     max-width: 1440px;
@@ -111,6 +123,8 @@ main {
   }
   h2 {
     margin-left: 15px;
+    width: 60%;
+    padding-left: 10px;
   }
 }
 header {
@@ -120,34 +134,32 @@ header {
   overflow: hidden;
   height: 113px;
   width: 100%;
-  padding: 0;
-  margin: 0;
 }
 header .header__title {
   height: 63px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
   width: 100%;
   text-align: center;
-  margin-bottom: 2px;
+  align-items: center;
 }
 header .header__title .header__title--h1 {
   font-family: Shrikhand;
   font-size: 1.875rem;
   font-weight: 400;
   height: auto;
-  margin-left: 0;
-  margin-right: 0;
   padding: 0;
+  padding-top: 14px;
+  margin: 0;
+  align-items: center;
 }
 header .header__icone {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   background-color: #EAEAEA;
   width: 100%;
   height: 50px;
-  margin: 0;
-  padding: 0;
+  padding-top: 0;
 }
 header .header__icone i {
   padding-right: 17px;
@@ -181,7 +193,8 @@ header .header__icone p {
 }
 .hero-header .hero-header__title {
   width: 73%;
-  margin-bottom: 0;
+  padding: 0;
+  padding-left: 0 !important;
 }
 .hero-header .hero-header__txt {
   margin: 0;
@@ -193,9 +206,17 @@ header .header__icone p {
 }
 
 .hero-header__btn {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto";
   display: flex;
   justify-content: center;
+  cursor: pointer;
   transition: opacity 0.3s ease;
+}
+.hero-header__btn:active {
+  text-decoration: none;
+  color: white;
 }
 .hero-header__btn button {
   border-radius: 1.5625rem;
@@ -212,16 +233,24 @@ header .header__icone p {
 .hero-header__btn :hover {
   opacity: 0.8;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  outline: none;
+  text-decoration: none;
 }
 
 .fonctionnement {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+  width: 90%;
   margin: 0;
   padding: 0;
   margin-bottom: 68px;
+}
+.fonctionnement h2 {
+  width: 80%;
+  padding-left: 40px;
 }
 .fonctionnement div {
   display: flex;
@@ -233,7 +262,7 @@ header .header__icone p {
   margin-right: 0;
   padding-right: 0;
 }
-.fonctionnement div button {
+.fonctionnement div .step {
   width: 100%;
   height: 72.4px;
   background-color: #F6F6F6;
@@ -245,12 +274,14 @@ header .header__icone p {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   margin: 0;
   position: relative;
+  display: flex;
+  flex-direction: row;
 }
-.fonctionnement div button i {
+.fonctionnement div .step i {
   color: #7E7E7E;
-  padding-right: 23px;
+  margin-left: 33px;
 }
-.fonctionnement div button div {
+.fonctionnement div .step div {
   width: 24px;
   height: 24px;
   display: flex;
@@ -259,6 +290,7 @@ header .header__icone p {
   background: #9356DC;
   border-radius: 50%;
   position: absolute;
+  top: 26px;
   left: -30px;
   font-family: Roboto;
   font-size: 16px;
@@ -266,9 +298,22 @@ header .header__icone p {
   color: white;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
+  .fonctionnement {
+    padding-left: 20px;
+  }
+  .fonctionnement h2 {
+    width: 100%;
+    text-align: start;
+    padding-left: 20px;
+  }
   .fonctionnement div {
+    width: 100%;
     flex-direction: row;
+    margin-left: 20px;
+  }
+  .fonctionnement div .step {
+    width: 30%;
   }
 }
 .restaurants {
@@ -282,7 +327,7 @@ header .header__icone p {
 }
 
 .restaurants h2 {
-  margin-left: 20px;
+  padding-left: 20px;
   padding-right: 0;
   margin: 0;
 }
@@ -293,9 +338,6 @@ header .header__icone p {
     flex-direction: column;
     gap: 30px;
     padding-top: 30px;
-  }
-  h2 {
-    padding-left: 75px;
   }
   .card-div {
     display: flex;
@@ -317,6 +359,7 @@ header .header__icone p {
 }
 .card a {
   text-decoration: none;
+  color: black;
 }
 .card a:visited {
   text-decoration: none;
@@ -368,7 +411,7 @@ header .header__icone p {
   width: 22px;
   height: 21px;
   position: relative;
-  left: -25px;
+  left: -8px;
   top: 15px;
 }
 .card .card-info .coeur-vide {
@@ -388,7 +431,7 @@ header .header__icone p {
   width: 22px;
   height: 21px;
   font-size: 22px;
-  top: -1.2px;
+  top: -1.4px;
   left: -1px;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: border-box;
@@ -423,23 +466,31 @@ header .header__icone p {
   }
 }
 footer {
+  display: flex;
+  flex-direction: column;
   padding: 22px 25px 22px 25px;
   background-color: #353535;
   width: auto;
+  max-width: 1440px;
+  gap: 20px;
 }
-footer h3, footer p {
-  color: white;
-}
-footer h3 {
+footer .titre-footer {
   font-family: Shrikhand;
   font-weight: 400;
+  color: white !important;
   font-size: 1.125rem;
-  margin-bottom: 16px;
   padding-right: 0;
+  width: 100%;
+}
+footer .footer-txt {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
 }
 footer .fa-utensils {
-  padding-right: 11px;
-  width: 11px;
+  padding-right: 10px;
   height: 13px;
 }
 footer .fa-handshake-angle {
@@ -451,42 +502,113 @@ footer p {
   font-size: 1rem;
   font-weight: 300;
   padding-left: 0;
+  width: 100%;
 }
 footer .bolder {
+  display: flex;
+  flex-direction: column;
   font-weight: 500;
+  gap: 5px;
+}
+footer .smaller {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer .smaller a {
+  text-decoration: none;
+  color: white;
+  font-family: Roboto;
+  font-weight: 300;
 }
 
 /* tablette */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   footer {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    gap: 2%;
   }
-  footer h3 {
+  footer .titre-footer {
     width: 13%;
-    padding-right: 0;
+    margin-left: 5px;
+    margin-bottom: 11px;
+    color: white;
   }
-  .footer-txt {
-    display: flex;
-    width: 75%;
+  footer .margin-none {
+    margin-bottom: 0;
+  }
+  footer .footer-txt {
+    flex-direction: row;
+    justify-content: end;
+    text-wrap: nowrap;
+    text-align: end;
+    width: 80%;
+    padding: 0;
+    gap: 10px;
+  }
+  footer .footer-txt .bolder {
+    flex-direction: row;
     gap: 5px;
-    justify-content: flex-end;
-    padding-right: 20px;
   }
-  .bolder {
+  footer .footer-txt .smaller {
+    flex-direction: row;
+    gap: 10px;
+    /*width: 60%;*/
+  }
+}
+/*
+
+p {
+    width: 30%;
+    padding: 0;
+}
+
+.footer-txt {
+    display: flex;
+    width: 30%;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: end;
+    /*padding-right: 20px;
+    width: auto;
+}
+
+.bolder {
     display: flex;
     gap: 8px;
-  }
-  .smaller {
+    width: 40%;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.smaller {
     display: flex;
+    width: 30%;
     gap: 5px;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .footer-txt {
-    width: 50%;
-  }
-}
+    padding: 0;
+    justify-content: flex-end;
+    p {
+        width: 40%;
+    text-wrap: nowrap;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        padding-top: 30px;
+    }
+}*/
+/*@media screen and (min-width: 1025px) {
+
+    .footer-txt {
+        width: 50%;
+    }
+}*/
 
 /*# sourceMappingURL=index.css.map */
