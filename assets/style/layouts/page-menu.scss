@@ -4,8 +4,6 @@
     margin: 0;
     padding :0;
     box-sizing: border-box;
-    /*box-shadow: 0 0 0 1px red
-    inset;*/
 
 }
 $linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -14,34 +12,29 @@ $lightblue: #99E2D0;
 
 
 
-header {
+.header-menu {
     height: 63px;
-
-    .header__title {
+    display: flex;
         position: relative;
+        text-align: center;
+        justify-content: center;
+        
 
         .fa-arrow-left {
-            position: absolute;
+            position: absolute; 
             left: 17px;
             top: 20px;
             size: 30px;
+            a {
+            color: black;
+            cursor: pointer;
+            &:visited {
+                color: black;
+            }
+        }
         }
     }
-    }
-   
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
 
-   
-
-    main {
-        width: 100%;
-    }
     
     .img {
         height: 275px;
@@ -67,6 +60,9 @@ header {
         margin-bottom: -100px;
         z-index: 1;
         .nom-restaurant {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding-top: 32px;
             font-family: Shrikhand;
             font-size: 28px;
@@ -79,7 +75,7 @@ header {
                 width: 22px;
                 height: 21px;
                 position: relative;
-                top: 5px;
+                top: -2px;
         
                 .coeur-vide {
                         width: 22px;
@@ -116,7 +112,7 @@ header {
             
         }
     
-    section {
+    .menu-section {
         width: 95%;
         margin-bottom: 40px;
         display: flex;
@@ -211,25 +207,6 @@ header {
             
         }
 }
-
-    
-   
-    /*.menu {
-        width: 70%;
-        top:-20px;
-    }
-
-    .menu-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        align-items: center;
-        justify-content: space-between;
-        
-    }
-    
-}*/
 
 
 

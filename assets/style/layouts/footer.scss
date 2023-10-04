@@ -1,12 +1,15 @@
+/** {box-shadow: 0 0 0 1px red
+    inset;}*/
+
 footer {
     display: flex;
     flex-direction: column;
     padding: 22px 25px 22px 25px;
     background-color: #353535;
-    width: auto;
+    width: 100%;
     max-width: 1440px;
-    gap:20px;
-
+    gap:16px;
+    z-index: 3;
 
     .titre-footer {
         font-family: Shrikhand;
@@ -14,14 +17,44 @@ footer {
         color: white !important;
         font-size: 1.125rem;
         padding-right: 0;
-        width: 100%;
+        width: auto;
     }
     .footer-txt {
         color: white;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        gap: 10px;
+        width: auto;
+        gap: 7px;
+        .bolder {
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+            gap: 7px;
+        }
+        .smaller {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            a {
+            text-decoration: none;
+            color: white;
+            font-family: Roboto;
+            font-weight: 300;
+            cursor: pointer;
+            a:visited {
+                font-family: Roboto;
+            }
+            }
+        }
+    }
+    
+    .p-footer {
+        font-family: Roboto;
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+        width: auto;
     }
     .fa-utensils {
         padding-right: 10px;
@@ -31,42 +64,14 @@ footer {
         padding-right: 8px;
         height: 13px;
     }
-    
-    & p {
-        font-family: Roboto;
-        font-size: 1rem;
-        font-weight: 300;
-        padding-left: 0;
-        width: 100%;
-    }
-    .bolder {
-        display: flex;
-        flex-direction: column;
-        font-weight: 500;
-        gap: 5px;
-    }
-    .smaller {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        a {
-        text-decoration: none;
-        color: white;
-        font-family: Roboto;
-        font-weight: 300;
-        }
-    }
 }
 
-/* tablette */
 
 @media screen and (min-width: 700px)  {
 
    footer {
         display: flex;
         flex-direction: row-reverse;
-        align-items: flex-end;
-        justify-content: flex-start;
         box-sizing: border-box;
         padding-top: 40px;
         padding-bottom: 40px;
@@ -74,26 +79,24 @@ footer {
         gap:2%;
 
         .titre-footer {
+            text-wrap: nowrap;
             width: 13%;
             margin-left: 5px;
-            margin-bottom: 11px;
             color: white;
+            margin-top: -2px;
         }
 
         .margin-none {
-            margin-bottom: 0;
+            margin-bottom: 5px;
         }
 
         .footer-txt {
             flex-direction: row;
             justify-content: end;
-            text-wrap: nowrap;
+            white-space: nowrap;
             text-align: end;
-            width: 80%;
             padding: 0;
-            
-
-            gap: 10px;
+            gap: 5%;
             .bolder {
                 flex-direction: row;
                 gap:5px;
@@ -101,60 +104,9 @@ footer {
             .smaller {
                 flex-direction: row;
                 gap:10px;
-                /*width: 60%;*/
             }
         }
     }
 }
 
-     /*
-
-    p {
-        width: 30%;
-        padding: 0;
-    }
-
-    .footer-txt {
-        display: flex;
-        width: 30%;
-        gap: 10px;
-        justify-content: flex-end;
-        align-items: end;
-        /*padding-right: 20px;
-        width: auto;
-    }
-
-    .bolder {
-        display: flex;
-        gap: 8px;
-        width: 40%;
-        justify-content: flex-end;
-        padding: 0;
-    }
-
-    .smaller {
-        display: flex;
-        width: 30%;
-        gap: 5px;
-        padding: 0;
-        justify-content: flex-end;
-        p {
-            width: 40%;
-        text-wrap: nowrap;
-        }
-        a {
-            text-decoration: none;
-            color: white;
-            padding-top: 30px;
-        }
-    }*/
-
-
-
-
-/*@media screen and (min-width: 1025px) {
-
-    .footer-txt {
-        width: 50%;
-    }
-}*/
+  

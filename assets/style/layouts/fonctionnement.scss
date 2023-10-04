@@ -3,25 +3,26 @@ $lightgrey: #F6F6F6;
 .fonctionnement {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 23px;
     width: 90%;
+    gap: 23px;
     margin: 0;
-    padding: 0;
-    margin-bottom: 68px;
+    padding-top: 48px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
 
-    & h2 {
-        width: 80%;
-        padding-left: 40px;
+    .fonctionnement-h2 {
+        width: 100%;
+        text-align: left;
+        font-family: Roboto;
     }
     
-    div {
+    .step-div {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    width: 86%;
+    width: 90%;
     margin-left: 20px;
     margin-right: 0;
     padding-right: 0;
@@ -42,12 +43,15 @@ $lightgrey: #F6F6F6;
         position: relative;
         display: flex;
         flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        text-wrap: nowrap;
 
-        i {
+        .i-number {
             color: #7E7E7E;
             margin-left: 33px;
         }
-        div {
+        .step-number {
             width: 24px;
             height: 24px;
             display: flex;
@@ -57,7 +61,7 @@ $lightgrey: #F6F6F6;
             border-radius: 50% ;
             position: absolute;
             top: 26px;
-            left: -30px;
+            left: -15px;
             font-family: Roboto;
             font-size: 16px;
             font-weight: 500;
@@ -68,21 +72,20 @@ $lightgrey: #F6F6F6;
 }}
 
 @media screen and (min-width: 700px) {
-        .fonctionnement {
-        padding-left: 20px;
-        
+       
+    .fonctionnement {    
+        width: 100%;    
 
-        h2 { 
+        .fonctionnement-h2 { 
+            padding-left: 20px;
             width: 100%;
             text-align: start;
-            padding-left: 20px;
 
         }
         
-        div {
-            width: 100%;
+        .step-div {
+            width: 99%;
             flex-direction: row;
-            margin-left: 20px;
 
             .step {
                 width: 30%;
