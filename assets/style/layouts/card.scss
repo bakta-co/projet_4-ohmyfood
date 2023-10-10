@@ -1,5 +1,3 @@
-$linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-
 .card {
         border-radius: 15px;
         background: #FFF;
@@ -38,7 +36,7 @@ $linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
             display:flex;
             text-align: center;
             font-size: 14px;
-            font-family: 'Roboto';
+            font-family: $fontFamily;
             color: #008766;
             position: absolute;
             right: 10px;
@@ -56,7 +54,7 @@ $linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
         flex-direction: row;
         justify-content: space-between;
         padding-left: 13px;
-        font-family: Roboto;
+        font-family: $fontFamily;
         width: 100%;
 
             .card-txt {
@@ -64,7 +62,7 @@ $linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
             padding-top: 10px;
             width: 100%;
                 .card-h3 {
-                font-family: Roboto;
+                font-family: $fontFamily;
                 font-size: 1.125rem;
                 font-weight: 700;
                 height: 20px;
@@ -72,7 +70,7 @@ $linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
                 width: 100%;
                 }
                 .card-p {
-                    font-family: Roboto;
+                    font-family: $fontFamily;
                     font-size: 1.0625rem;
                     font-weight: 300;
                     height: 24px;

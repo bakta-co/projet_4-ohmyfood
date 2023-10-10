@@ -1,5 +1,3 @@
-$lightgrey: #F6F6F6;
-
 .hero-header {
     display: flex;
     flex-direction: column;
@@ -16,13 +14,13 @@ $lightgrey: #F6F6F6;
     
     .hero-header__title {
         width: 73%;
-        font-family: Roboto;
+        font-family: $fontFamily;
      }
 
     .hero-header__txt {
         margin: 0;
         padding-bottom: 27px;
-        font-family: Roboto;
+        font-family: $fontFamily;
         font-size: 1.125rem;
         font-weight: 100;
         width: 84%;

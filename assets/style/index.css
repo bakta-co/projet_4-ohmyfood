@@ -1,9 +1,6 @@
-@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
   font-family: "Shrikhand", sans-serif;
-  /*box-shadow: 0 0 0 1px red
-  inset;*/
 }
 
 .preloader {
@@ -100,7 +97,6 @@ header {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  height: 113px;
   width: 100%;
 }
 header .header__title {
@@ -173,7 +169,7 @@ header .header__icone .p-header {
 .hero-header__btn {
   text-decoration: none;
   color: white;
-  font-family: "Roboto";
+  font-family: Roboto;
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -200,6 +196,27 @@ header .header__icone .p-header {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   outline: none;
   text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+a[href^="#"] {
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a[href^="#"]:target {
+  animation: smoothScroll 0.5s ease-in-out;
 }
 
 .fonctionnement {
@@ -349,7 +366,7 @@ header .header__icone .p-header {
   display: flex;
   text-align: center;
   font-size: 14px;
-  font-family: "Roboto";
+  font-family: Roboto;
   color: #008766;
   position: absolute;
   right: 10px;
@@ -433,8 +450,6 @@ header .header__icone .p-header {
     width: 40%;
   }
 }
-/** {box-shadow: 0 0 0 1px red
-    inset;}*/
 footer {
   display: flex;
   flex-direction: column;
@@ -536,8 +551,6 @@ footer .fa-handshake-angle {
   }
 }
 * {
-  font-family: "Roboto", sans-serif;
-  font-family: "Shrikhand", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -560,7 +573,10 @@ footer .fa-handshake-angle {
   color: black;
   cursor: pointer;
 }
-.header-menu .fa-arrow-left a:visited {
+.header-menu .fa-arrow-left a a:visited {
+  color: black;
+}
+.header-menu .fa-arrow-left a a:active {
   color: black;
 }
 
@@ -723,20 +739,20 @@ h4 {
   }
 }
 .defil {
-  opacity: 0; /* Masque les éléments au départ */
-  animation: fadeIn 0.5s ease forwards; /* Utilisez l'animation fadeIn */
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
 }
 
 .defil-animation .defil:nth-child(1) {
-  animation-delay: 0.5s; /* Délai pour le premier élément (1 seconde) */
+  animation-delay: 0.5s;
 }
 
 .defil-animation .defil:nth-child(2) {
-  animation-delay: 1.5s; /* Délai pour le deuxième élément (2 secondes) */
+  animation-delay: 1.5s;
 }
 
 .defil-animation .defil:nth-child(3) {
-  animation-delay: 2.5s; /* Délai pour le troisième élément (3 secondes) */
+  animation-delay: 2.5s;
 }
 
 @keyframes fadeIn {
@@ -760,7 +776,7 @@ h4 {
   cursor: pointer;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   position: relative;
-  font-family: "Roboto";
+  font-family: Roboto;
   overflow: hidden;
   text-overflow: ellipsis;
   transition: all 0.2s linear 0s;
@@ -786,17 +802,17 @@ h4 {
   transition: all 0.2s linear 0s;
   text-align: end;
 }
-.choix-repas:focus {
+.choix-repas:hover {
   text-indent: 0px;
 }
-.choix-repas:focus::before {
+.choix-repas:hover::before {
   right: 0;
   text-indent: 0px;
 }
-.choix-repas:focus .prix {
+.choix-repas:hover .prix {
   transform: translateX(-250%);
 }
-.choix-repas:focus .reduire-click {
+.choix-repas:hover .reduire-click {
   width: 70%;
 }
 .choix-repas .reduire-click {

@@ -1,16 +1,8 @@
-* {
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Shrikhand', sans-serif;
-    margin: 0;
+* {    margin: 0;
     padding :0;
     box-sizing: border-box;
 
 }
-$linearGradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-$lightgrey: #F6F6F6;
-$lightblue: #99E2D0;
-
-
 
 .header-menu {
     height: 63px;
@@ -28,7 +20,10 @@ $lightblue: #99E2D0;
             a {
             color: black;
             cursor: pointer;
-            &:visited {
+            a:visited {
+                color: black;
+            }
+            a:active {
                 color: black;
             }
         }
@@ -118,7 +113,7 @@ $lightblue: #99E2D0;
         display: flex;
         flex-direction: column;
     .titre-epd {
-        font-family: Roboto;
+        font-family: $fontFamily;
         font-weight: 300;
         font-size: 16px;
         padding-bottom: 5px;
@@ -142,7 +137,7 @@ $lightblue: #99E2D0;
     }
     
         h4 {
-            font-family: Roboto;
+            font-family: $fontFamily;
             font-size: 18px;
             font-weight: 500;
             text-align: start;
@@ -153,7 +148,7 @@ $lightblue: #99E2D0;
             display: flex;
             justify-content: space-between;
             width: auto;
-            font-family: Roboto ;
+            font-family: $fontFamily ;
             font-style: normal;
             font-size: 15px;
             font-weight: 100;
@@ -165,14 +160,14 @@ $lightblue: #99E2D0;
             }
         
         .description {
-            font-family: Roboto;
+            font-family: $fontFamily;
             font-size: 15px;
             text-align: start;
             flex-wrap: nowrap;
             margin-right: 0;
         }
         .prix {
-            font-family: Roboto;
+            font-family: $fontFamily;
             position: absolute;
             right: 10px;
             text-align: end;
