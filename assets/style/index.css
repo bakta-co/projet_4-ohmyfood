@@ -76,7 +76,7 @@ body .container main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -532,7 +532,6 @@ footer .fa-handshake-angle {
     gap: 2%;
   }
   footer .titre-footer {
-    text-wrap: nowrap;
     width: 13%;
     margin-left: 5px;
     color: white;
@@ -575,7 +574,7 @@ footer .fa-handshake-angle {
   position: absolute;
   left: 17px;
   top: 20px;
-  size: 30px;
+  font-size: 20px;
 }
 .header-menu .fa-arrow-left a {
   color: black;
@@ -609,11 +608,13 @@ footer .fa-handshake-angle {
   top: -100px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   margin-bottom: -100px;
   z-index: 1;
+  overflow: hidden;
 }
 .menu .nom-restaurant {
+  white-space: nowrap;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -622,11 +623,10 @@ footer .fa-handshake-angle {
   font-size: 28px;
   font-weight: 400;
   text-align: start;
-  text-wrap: nowrap;
   width: 80%;
 }
 .menu .nom-restaurant span {
-  margin-left: 30px;
+  margin-left: 15px;
   width: 22px;
   height: 21px;
   position: relative;

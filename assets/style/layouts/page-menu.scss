@@ -4,6 +4,7 @@
 
 }
 
+
 .header-menu {
     height: 63px;
     display: flex;
@@ -16,7 +17,7 @@
             position: absolute; 
             left: 17px;
             top: 20px;
-            size: 30px;
+            font-size: 20px;
             a {
             color: black;
             cursor: pointer;
@@ -48,13 +49,17 @@
         align-items: center;
         background-color: $lightgrey;
         border-radius: 50px 50px 0 0;
-        position: relative; top: -100px;
+        position: relative; 
+        top: -100px;
         padding-left: 10px;
         padding-right: 10px;
-        padding-bottom: 40px;
+        padding-bottom: 50px;
         margin-bottom: -100px;
         z-index: 1;
+        overflow: hidden;
+        
         .nom-restaurant {
+            white-space: nowrap;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -63,10 +68,9 @@
             font-size: 28px;
             font-weight: 400;
             text-align: start;
-            text-wrap: nowrap;
             width: 80%;
             span { 
-                margin-left: 30px;
+                margin-left: 15px;
                 width: 22px;
                 height: 21px;
                 position: relative;
