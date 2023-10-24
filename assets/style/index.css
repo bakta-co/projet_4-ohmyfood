@@ -167,34 +167,41 @@ header .header__icone .p-header {
 }
 
 .hero-header__btn {
-  text-decoration: none;
-  color: white;
-  font-family: Roboto;
   display: flex;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-.hero-header__btn:active {
-  text-decoration: none;
-  color: white;
-}
-.hero-header__btn button {
   border-radius: 1.5625rem;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   width: 218px;
   height: 50px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
+  transition: opacity 0.3s ease;
 }
-.hero-header__btn :hover {
+.hero-header__btn:hover {
   opacity: 0.8;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  outline: none;
+  text-decoration: none;
+}
+.hero-header__btn .explorer {
+  text-decoration: none;
+  font-family: Roboto;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+.hero-header__btn .explorer :hover {
+  text-decoration: none;
+}
+.hero-header__btn .explorer :focus {
+  text-decoration: none;
+  color: white;
+}
+.hero-header__btn a:visited {
+  text-decoration: none;
+}
+.hero-header__btn a:hover {
   text-decoration: none;
 }
 
@@ -260,12 +267,12 @@ a[href^="#"]:target {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: start;
   gap: 10px;
-  text-wrap: nowrap;
 }
 .fonctionnement .step-div .step .i-number {
   color: #7E7E7E;
-  margin-left: 33px;
+  margin-left: 20px;
 }
 .fonctionnement .step-div .step .step-number {
   width: 24px;
@@ -338,6 +345,7 @@ a[href^="#"]:target {
   margin-left: 17px;
   margin-right: 18px;
   margin-bottom: 18px;
+  position: relative;
   z-index: 0;
 }
 .card a {
@@ -409,10 +417,10 @@ a[href^="#"]:target {
 .card .icone-coeur {
   width: 22px;
   height: 21px;
-  position: relative;
-  left: -10px;
-  top: 30px;
+  position: absolute;
   z-index: 3;
+  bottom: 30px;
+  right: 10px;
 }
 .card .coeur-vide {
   width: 22px;
@@ -420,7 +428,7 @@ a[href^="#"]:target {
   font-size: 20px;
   font-weight: normal;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   opacity: 1;
   transition: opacity;
 }
