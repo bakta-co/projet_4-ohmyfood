@@ -784,7 +784,6 @@ h4 {
   position: relative;
   font-family: Roboto;
   overflow: hidden;
-  transition: all 0.2s linear 0s;
 }
 .choix-repas::before {
   content: "\f058";
